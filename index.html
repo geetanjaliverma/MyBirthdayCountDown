@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Birthday 2024</title>
+    <link rel="stylesheet" href="countdown.css"></link>
+</head>
+<div>
+<div class="container">
+    <h1>Geetanjali's Birthday is in</h1>
+    <div class="launch-time">
+        <div>
+            <p id="day">00</p>
+            <span>Days</span>
+        </div>
+        <div>
+            <p id="hour">00</p>
+            <span>Hours</span>
+        </div>
+        <div>
+            <p id="minute">00</p>
+            <span>Minutes</span>
+        </div>
+        <div>
+            <p id="second">00</p>
+            <span>Seconds</span>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var birthdayDate=new Date("26 Jul,2024 00:00:00").getTime();
+    var x= setInterval(function(){
+        var todayDate=new Date().getTime();
+        var days=birthdayDate-todayDate;
+
+        var day=Math.floor(days/(1000*60*60*24));
+        var hours=Math.floor((days % (1000*60*60*24))/(1000*60*60));
+        var minutes=Math.floor((days % (1000*60*60))/(1000*60));
+        var seconds=Math.floor((days % (1000*60))/1000);
+
+        document.getElementById("day").innerHTML=day;
+        document.getElementById("hour").innerHTML=hours;
+        document.getElementById("minute").innerHTML=minutes;
+        document.getElementById("second").innerHTML=seconds;
+
+        if(days<0){
+            clearInterval(x);
+        document.getElementById("day").innerHTML="00";
+        document.getElementById("hour").innerHTML="00";
+        document.getElementById("minute").innerHTML="00";
+        document.getElementById("second").innerHTML="00";
+
+        }
+    },1000);
+</script>
+</html>

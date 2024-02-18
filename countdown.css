@@ -1,0 +1,32 @@
+body{
+    background-image: url(bg.jpeg);
+    background-size:100% 170%;
+    color: rgb(6, 6, 71);
+}
+
+.launch-time{
+    display:inline-flex;
+    margin-left: 300px;
+}
+
+.container h1{
+    text-align: center; 
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+.launch-time div{
+    flex-basis: 100px;
+    padding:50px;
+}
+
+.launch-time div p{
+    font-size: 50px;
+    margin-bottom: -14px;
+}
+
+.launch-time div span{
+    font-size: 25px;
+    margin-bottom: -14px;
+}
+
